@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "利用Github和Jekyll搭建个人博客"
-categories: 网站搭建
+category: 网站搭建
 tags: jekyll markdown 
 author: y570pc
 ---
