@@ -37,7 +37,7 @@
     <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon" />
     
     <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" href="/assets/img/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/assets/img/icons/favicon.ico" />
     <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/icons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/icons/apple-touch-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/icons/apple-touch-icon-114x114.png" />
@@ -50,10 +50,10 @@
     <!-- Windows 8 Tile Icons -->
     <meta name="application-name" content="{{ site.username }} Blog">
     <meta name="msapplication-TileColor" content="#0562DC">
-    <meta name="msapplication-square70x70logo" content="smalltile.png" />
-    <meta name="msapplication-square150x150logo" content="mediumtile.png" />
-    <meta name="msapplication-wide310x150logo" content="widetile.png" />
-    <meta name="msapplication-square310x310logo" content="largetile.png" />
+    <meta name="msapplication-square70x70logo" content="favicon.ico" />
+    <meta name="msapplication-square150x150logo" content="favicon.ico" />
+    <meta name="msapplication-wide310x150logo" content="favicon.ico" />
+    <meta name="msapplication-square310x310logo" content="favicon.ico" />
     
     <!-- Android Lolipop Theme Color -->
     <meta name="theme-color" content="{{ page.color }}">
@@ -64,4 +64,15 @@
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+	
+	<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             processEscapes: true
+           }
+         });
+</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>

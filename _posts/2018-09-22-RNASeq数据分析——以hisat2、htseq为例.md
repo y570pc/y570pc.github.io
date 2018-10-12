@@ -1,9 +1,10 @@
 ---
 layout: post
 title:  "RNASeq数据分析——以hisat2、htseq为例"
-categories: 生信
+category: 'bioinformation'
 tags: ubuntu hisat2 htseq rnaseq 
 author: y570pc
+image: "http://blog.genesino.com/images/ngs/RNAseq_complex_workflow.png"
 ---
 
 * content

@@ -1,24 +1,22 @@
 # Site Settings
-title: Jekflix | A theme for Jekyll
-email: youremail@xyz.com
-description: Some text about your blog.
+title: 炎季宏的博客|致力于成为一名有钱、有理想的自由职业者！
+email: 460816610@qq.com
+description: 技术、美学、生活
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "y570pc.github.io" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-X"
 
 # User Settings
-username: Jekflix
-user_description: Some text about you.
+username: 炎季宏的博客
+user_description: 目标：有才、有心、有趣、有料、有颜、有德
 disqus_username: disqus_username
 
 # Social Media
 # Remove the item if you don't need it
-github_username: github_username
-facebook_username: facebook_username
-twitter_username: twitter_username
-instagram_username: instagram_username
-linkedin_username: linkedin_username
-medium_username: medium_username
+twitter_username: wyy570pc
+weibo_username: y570pc
+wechat_username: y570pc
+email: 460816610@qq.com
 
 # Build settings
 markdown: kramdown
