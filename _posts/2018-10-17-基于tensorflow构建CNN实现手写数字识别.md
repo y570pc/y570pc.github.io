@@ -125,7 +125,7 @@ def train(mnist):
     W_fc1 = weight_variable([7*7*64, 1024])
     b_fc1 = bias_variable([1024])
     h_pool2_flat = tf.reshape(h_pool2, [-1, 7*7*64])    #7x7x64 --> 1x3136
-    h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)  #FC层传播 3136 --> 1024，f.nn.relu()函数是将大于0的数保持不变，小于0的数置为0
+    h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)  #FC层传播 3136 --> 1024，Relu激活函数（The Rectified Linear Unit）表达式为：f(x)=max(0,x)。
 
     # 使用Dropout层减轻过拟合,通过一个placeholder传入keep_prob比率控制
     # 在训练中,我们随机丢弃一部分节点的数据来减轻过拟合,预测时则保留全部数据追求最佳性能
