@@ -176,3 +176,5 @@ if __name__=="__main__":
 [3]. [Tensorflow 的reduce_sum()函数到底是什么意思，谁能解释下？](https://www.zhihu.com/question/51325408)
 
 [4]. [如何选择优化器 optimizer](https://blog.csdn.net/aliceyangxi1987/article/details/73210204)
+
+[5]. [深度学习(DL)与卷积神经网络(CNN)学习笔记随笔-03-基于Python的LeNet之LR](https://blog.csdn.net/niuwei22007/article/details/47705081)

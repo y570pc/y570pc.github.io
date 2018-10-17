@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "RNASeq数据分析——以hisat2、htseq为例"
+title:  "RNASeq数据比对——以hisat2、htseq为例"
 category: 'bioinformation'
 tags: ubuntu hisat2 htseq rnaseq 
 author: y570pc
@@ -10,7 +10,7 @@ image: "http://blog.genesino.com/images/ngs/RNAseq_complex_workflow.png"
 * content
 {:toc}
 
-## 常见linux命令
+## 常见linux命令<sup>[3]</sup>
 {% highlight js%}
 .   //当前目录
 ~    //当前用户目录
@@ -178,6 +178,8 @@ paste *.txt | awk '{printf $1 "\t";for(i=2;i<=NF;i+=2) printf $i"\t";printf $i}'
 [1]. [浙大植物学小白的转录组笔记](https://www.wxwenku.com/d/102180058)
 
 [2]. [转录组入门(6)： reads计数](https://www.jianshu.com/p/e9742bbf83b9)
+
+[3]. [《Advanced Bash-Scripting Guide》 in Chinese](https://linuxstory.gitbooks.io/advanced-bash-scripting-guide-in-chinese/)
 
 
 
