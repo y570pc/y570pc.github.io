@@ -13,20 +13,24 @@ introduction: 本人一直有各种收藏癖，收藏的想要去的地方多了
 
 #### 已实现功能
 
+\begin{itemize}
 \item[$\bigstar$] 基于浏览器定位
 \item[$\bigstar$] 多点标注
 \item[$\bigstar$] 城市切换
 \item[$\bigstar$] 图文信息窗口
+\end{itemize}
 
 #### 未实现功能
 
+\begin{itemize}
 \item[$\bigstar$] 分类筛选
 \item[$\bigstar$] 信息窗口滑块
 \item[$\bigstar$] 分类标注
 \item[$\bigstar$] 基于控件添加地点信息
 \item[$\bigstar$] 数据分离
+\end{itemize}
 
-#### 代码
+## 代码
 {% highlight js%}
 <!DOCTYPE html>
 <html>
