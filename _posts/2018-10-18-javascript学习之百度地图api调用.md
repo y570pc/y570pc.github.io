@@ -3,9 +3,8 @@ layout: post
 title:  "javascript学习之百度地图api调用"
 category: 'bigdata'
 tags: javascript 百度地图api
-author: y570pc
-image: "/img/2018-10-18-01.jpg"
 introduction: 本人一直有各种收藏癖，收藏的想要去的地方多了以后，就想着怎么分类管理。现有的各种地图APP不能满足我的要求，于是决定自己动手解决。
+image: "/img/2018-10-18-01.jpg"
 ---
 
 
@@ -13,24 +12,21 @@ introduction: 本人一直有各种收藏癖，收藏的想要去的地方多了
 
 #### 已实现功能
 
-\begin{itemize}
-\item[$\bigstar$] 基于浏览器定位
-\item[$\bigstar$] 多点标注
-\item[$\bigstar$] 城市切换
-\item[$\bigstar$] 图文信息窗口
-\end{itemize}
+* 基于浏览器定位
+* 多点标注
+* 城市切换
+* 图文信息窗口
 
 #### 未实现功能
 
-\begin{itemize}
-\item[$\bigstar$] 分类筛选
-\item[$\bigstar$] 信息窗口滑块
-\item[$\bigstar$] 分类标注
-\item[$\bigstar$] 基于控件添加地点信息
-\item[$\bigstar$] 数据分离
-\end{itemize}
+* 分类筛选
+* 信息窗口滑块
+* 分类标注
+* 基于控件添加地点信息
+* 数据分离
 
 ## 代码
+
 {% highlight js%}
 <!DOCTYPE html>
 <html>
@@ -119,4 +115,5 @@ introduction: 本人一直有各种收藏癖，收藏的想要去的地方多了
 {% endhighlight %}
 
 ## 参考资料
+
 [1]. [百度地图api示例](http://lbsyun.baidu.com/jsdemo.htm)
