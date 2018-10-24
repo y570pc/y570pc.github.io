@@ -185,6 +185,31 @@ plt.show()
 #### 代码
 
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy import stats
+from sklearn.linear_model import BayesianRidge, LinearRegression
+
+n_samples, n_features = 100, 100
+X = np.random.randn(n_samples, n_features)  # Create Gaussian data
+# Create weigts with a precision lambda_ of 4.
+lambda_ = 4.
+w = np.zeros(n_features)
+# Only keep 10 weights of interest
+relevant_features = np.random.randint(0, n_features, 10) #找10个随机位置
+for i in relevant_features:
+    w[i] = stats.norm.rvs(loc=0, scale=1. / np.sqrt(lambda_)) #制造10个非0的特征
+# Create noise with a precision alpha of 50.
+alpha_ = 50.
+noise = stats.norm.rvs(loc=0, scale=1. / np.sqrt(alpha_), size=n_samples)
+y = np.dot(X, w) + noise #加噪音
+
+clf = BayesianRidge(compute_score=True)
+clf.fit(X,y)
+
+ols = LinearRegression()
+ols.fit(X,y)
+
 plt.figure()
 plt.subplot(3,1,1)
 plt.title("Weights of the model")
