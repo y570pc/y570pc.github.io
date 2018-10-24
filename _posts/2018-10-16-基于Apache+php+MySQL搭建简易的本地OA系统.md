@@ -31,13 +31,17 @@ echo phpinfo();
 
 #### mysql配置
 
-下载[MySQL Community Server 8.0.12](https://dev.mysql.com/downloads/mysql/)，解压到amp目录下，按要求安装。
-
-安装过程中如出现如下问题`The service already exists`，以管理员身份运行cmd，进入amp\mysql\mysql-8.0.12-winx64\Apache24\bin目录，输入`sc delete mysql`，则可继续后续安装过程。
+下载[MySQL Community Server 5.6.41](https://dev.mysql.com/downloads/mysql/5.6.html)，解压到amp目录下，按要求安装。
 
 启动mysql：`net start mysql`
 
-修改root密码
+修改root密码：
+
+```sql
+use mysql;
+UPDATE user SET password=PASSWORD("123456") WHERE user='root';
+FLUSH PRIVILEGES;
+```
 
 停止mysql：`net stop mysql`
 
