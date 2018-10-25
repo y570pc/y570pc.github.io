@@ -50,6 +50,7 @@ tags: markdown latex
 
 使用`![图片](https://gitee.com/amius/learngit/raw/master/%E5%A4%B4%E5%83%8F.jpg)`,显示图片。
 
+使用`[几种常见回归及scikit-learn实现]({{ y570pc.github.io }}{% link _posts/2018-10-24-几种常见回归及scikit-learn实现.md %})`，实现站内引用，效果[几种常见回归及scikit-learn实现]({{ y570pc.github.io }}{% link _posts/2018-10-24-几种常见回归及scikit-learn实现.md %})。
 #### 列表
 
 使用
