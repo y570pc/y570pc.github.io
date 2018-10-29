@@ -57,7 +57,7 @@ tags: markdown latex
 
 ```
 * &hearts;列表
-	&hearts;字列表 \\需要输入\tab键
+	* &hearts;字列表 \\需要输入\tab键
 ```
 
 显示
