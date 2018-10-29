@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2018-10-10-基于tensorflow构建CNN实现手写数字识别"
+title:  "基于tensorflow构建CNN实现手写数字识别"
 category: 'bigdata'
 tags: CNN tensorflow 深度学习
 author: y570pc
