@@ -61,6 +61,7 @@ source deactivate py2
 
 ## 数据下载
 #### 下载mRNA-seq数据
+
 数据来自于GSE81916中敲除了AKAP95基因的人293细胞的mRNA-seq数据SRR3589956、SRR3589957。
 {% highlight js%}
 cd ~/ncbi/public/sra
@@ -68,6 +69,7 @@ for ((i=56;i<=57;i=i++));do prefetch -v SRR35899$i ;done
 {% endhighlight %}
 
 #### 参考基因组hg19下载
+
 [下载地址](http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz)，存放到~/ncbi/public/reference/genome目录下。
 {% highlight js%}
 cd ~/ncbi/public/reference/genome
@@ -77,6 +79,7 @@ rm -rf chr*
 {% endhighlight %}
 
 #### 参考基因组注释gtf文件下载
+
 第28版本的hg19人类基因组注释信息[GTF文件下载地址](ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_28/GRCh37_mapping/gencode.v28lift37.annotation.gtf.gz)，第28版本的hg19人类基因组注释信息[GTF文件下载地址](ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_28/GRCh37_mapping/gencode.v28lift37.annotation.gff3.gz)。
 文件存放到~/ncbi/public/reference/annotation
 {% highlight js%}
@@ -85,6 +88,7 @@ gunzip *.gz && rm -rf *.gz
 {% endhighlight %}
 
 #### 人类基因组index文件下载
+
 [下载地址](ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/hg19.tar.gz)，存放到~/ncbi/public/reference/index目录下。
 {% highlight js%}
 cd ~/ncbi/public/reference/index
@@ -92,28 +96,33 @@ tar -zxvf *.tar.gz && rm -rf *.tar.gz
 {% endhighlight %}
 
 #### 参考基因组注释bed文件下载
+
 [hg19_RefSeq.bed下载地址](https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/)，存放到~/ncbi/public/reference/目录下。
 
 ## 数据分析
 #### fastq-dump将sra数据转换成fastq格式
+
 {% highlight js%}
 for ((i=56;i<=57;i=i++));do fastq-dump --gzip --split-3 -A ~/ncbi/public/sra/SRR35899$i.sra -O ~/ncbi/public/fastq ;done
 {% endhighlight %}
 *--gzip 使得输出的结果是.gz的格式；--split-3 对于PE测序，输出的结果是*_1.fastq.gz和*_2.fastq.gz；-A 输入sra文件的绝对路径。*
 
 #### Fastqc进行测序结果的质控
+
 {% highlight js%}
 cd ~/ncbi/public/fastq
 fastqc -o ~/ncbi/public/QC *.fastq.gz
 {% endhighlight %}
 
 #### MultiQC对质控结果合并
+
 {% highlight js%}
 cd ~/ncbi/public/QC
 multiqc *fastqc.zip --ignore *.html
 {% endhighlight %}
 
 #### 测序数据比对到参考基因组上
+
 {% highlight js%}
 cd ~/ncbi/public/
 for i in `seq 56 57`
@@ -123,6 +132,7 @@ done
 {% endhighlight %}
 
 #### sam格式转换为bam、排序、建立index
+
 {% highlight js%}
 cd ~/ncbi/public/aligned
 for i in `seq 56 57`
@@ -134,16 +144,19 @@ done
 {% endhighlight %}
 
 #### 比对质控
+
 {% highlight js%}
 bam_stat.py -i SRR3589956_sorted.bam
 {% endhighlight %}
  
 #### 计算基因组覆盖率
+
 {% highlight js%}
 read_distribution.py -i SRR3589956_sorted.bam -r reference/hg19_RefSeq.bed
 {% endhighlight %}
 
 #### resds计数
+
 {% highlight js%}
 //单个处理
 htseq-count -r pos -f bam SRR3589956_sorted.bam ~/ncbi/public/reference/annotation/gencode.v28lift37.annotation.gtf.gz > SRR3589956.count
@@ -156,6 +169,7 @@ done
 {% endhighlight %}
 
 #### 合并reads计数数据形成表达矩阵
+
 {% highlight python%}
 #方法一
 import sys
@@ -181,7 +195,7 @@ paste *.txt | awk '{printf $1 "\t";for(i=2;i<=NF;i+=2) printf $i"\t";printf $i}'
 
 [3]. [《Advanced Bash-Scripting Guide》 in Chinese](https://linuxstory.gitbooks.io/advanced-bash-scripting-guide-in-chinese/)
 
-
+[4]. [RNASEQ学习流程](https://uteric.github.io/RNASEQ%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B/)
 
 
 
