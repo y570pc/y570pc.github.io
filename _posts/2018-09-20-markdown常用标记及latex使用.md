@@ -176,7 +176,7 @@ Hey! Hover the cursor over me and guess what?! :)
 #### 嵌入文档
 
 <figure class="video_container">
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vTC0AMHutiHUStepiowcGW0ph6cYXVucip6guio6ZKFJ8ORHXGPFBUhbu_7pmAWfmgRrX0WAu9Uj6QK/pub?embedded=true"></iframe>
+<iframe src="https://caueducn-my.sharepoint.com/personal/y570pc_cau_edu_cn/_layouts/15/Doc.aspx?sourcedoc={484a9634-d30c-4dca-8421-3fb14eabaf87}&amp;action=embedview&amp;wdStartOn=1" width="476px" height="673px" frameborder="0">这是嵌入 <a target="_blank" href="https://office.com">Microsoft Office</a> 文档，由 <a target="_blank" href="https://office.com/webapps">Office Online</a> 支持。</iframe>
 </figure>
 
 #### 创建滑动条
