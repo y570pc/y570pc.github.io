@@ -51,6 +51,7 @@ tags: markdown latex
 使用`![图片](https://gitee.com/amius/learngit/raw/master/%E5%A4%B4%E5%83%8F.jpg)`,显示图片。
 
 使用`[几种常见回归及scikit-learn实现]({{ y570pc.github.io }}{% link _posts/2018-10-24-几种常见回归及scikit-learn实现.md %})`，实现站内引用，效果[几种常见回归及scikit-learn实现]({{ y570pc.github.io }}{% link _posts/2018-10-24-几种常见回归及scikit-learn实现.md %})。
+
 #### 列表
 
 使用
@@ -143,6 +144,71 @@ tags: markdown latex
     </tr>
 </table>
 
+#### 样式
+<style>
+  .purple {
+    color:inherit;
+  }
+  .purple:hover {
+    color:rgb(252,109,38);
+  }
+</style>
+Hey! Hover the cursor over me and guess what?! :)
+{: .purple}
+
+#### 折叠
+<div style="margin:0 auto;width:750px;">
+<details>
+  <summary>Question 1</summary>
+  <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+  <details>
+    <summary>Related documents</summary>
+    <ul>
+      <li><a href="#">Lorem ipsum dolor sit amet,  consectetuer adipiscing elit.</a></li>
+      <li><a href="#">Aliquam tincidunt mauris eu  risus.</a></li>
+      <li><a href="#">Lorem ipsum dolor sit amet,  consectetuer adipiscing elit.</a></li>
+      <li><a href="#">Aliquam tincidunt mauris eu  risus.</a></li>
+    </ul>
+  </details>
+</details>
+</div>
+
+#### 嵌入文档
+
+<figure class="video_container">
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTC0AMHutiHUStepiowcGW0ph6cYXVucip6guio6ZKFJ8ORHXGPFBUhbu_7pmAWfmgRrX0WAu9Uj6QK/pub?embedded=true"></iframe>
+</figure>
+
+#### 创建滑动条
+
+
+<div style="margin:0 auto; background:#F8F8F8;border:1px solid black;width:800px;height:600px;overflow-y:scroll;overflow-x:scroll;text-align:left;">
+<p>
+#建立索引，为了减少占用的计算资源<br>
+bowtie-build bowtie_index/mm10.fa bowtie_index/mm10<br>
+#查看生成的结果，共6个文件<br>
+ls -l bowtie_index/*.ebwt<br>
+#结果<br>
+-rw-r--r-- 1 y570pc y570pc 59026331 10月 25 19:57 bowtie_index/mm10.1.ebwt<br>
+-rw-r--r-- 1 y570pc y570pc 23988656 10月 25 19:57 bowtie_index/mm10.2.ebwt<br>
+-rw-r--r-- 1 y570pc y570pc      458 10月 25 19:55 bowtie_index/mm10.3.ebwt<br>
+-rw-r--r-- 1 y570pc y570pc 47977298 10月 25 19:55 bowtie_index/mm10.4.ebwt<br>
+-rw-r--r-- 1 y570pc y570pc 59026331 10月 25 19:59 bowtie_index/mm10.rev.1.ebwt<br>
+-rw-r--r-- 1 y570pc y570pc 23988656 10月 25 19:59 bowtie_index/mm10.rev.2.ebwt<br>
+#比对<br>
+bowtie -m 1 -S bowtie_index/mm10 Oct4.fastq > Oct4.sam  #'-S'表示输出格式为sam，'-m<br> -1'表示reads多次map到参考序列时bowtie仅报道一次。<br>
+#查看结果<br>
+head -n 10 Oct4.sam<br>
+#转sam文件为bam文件，bam为二进制文件，可以减少存储空间<br>
+samtools view -bSo Oct4.bam Oct4.sam<br>
+#排序<br>
+samtools sort Oct4.bam -o Oct4.sorted.bam<br>
+#对已排序的文件建立索引<br>
+samtools index Oct4.sorted.bam  #h会生成索引文件Oct4.sorted.bam.bai<br>
+</p>
+</div>
+
+
 ## latex
 
 #### 希腊字母
@@ -168,6 +234,9 @@ tags: markdown latex
 |---|---|---|---|
 |$\vert$|\vert|||
 
+## 参考资料
+
+[1]. [Markdown Guide](https://about.gitlab.com/handbook/product/technical-writing/markdown-guide/#hello)
 
 
 
