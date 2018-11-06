@@ -121,9 +121,11 @@ else
 
 安装过程中可能需要php_extension，把`php.ini`对应的扩展行首的注释符去掉即可。对mysql配置文件的修改参考[4]。
 
+在浏览器中输入`localhost:8080/moodle`，若出现登陆界面则表示安装成功。
+
 #### 结果展示
 
-![01](2018-10-16-01.jpg)
+![01](./img/2018-10-16-01.jpg)
 
 ## 主要参考资料
 [1]. [Windows下Apache+PHP+MySQL搭建历程](https://www.jianshu.com/p/9f41bcdff322)
