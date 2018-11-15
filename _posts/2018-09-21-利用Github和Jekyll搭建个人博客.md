@@ -178,3 +178,7 @@ $$
 
 * 插入效果展示
 <iframe src="https://music.163.com/outchain/player?type=3&id=794070604&auto=0&height=66" width="500px" height="80px" frameborder="0" scrolling="no"> </iframe>
+
+## 参考资料
+
+[1]. [Linux(Ubuntu 64)下安装GIt并配置连接GitHub](https://www.jianshu.com/p/6c61b13e8bdb)
