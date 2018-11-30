@@ -32,6 +32,8 @@ tags: markdown latex
 
 全角空格使用`&emsp;`
 
+多字母紧凑`\mli{}`
+
 #### 引用
 
 使用
