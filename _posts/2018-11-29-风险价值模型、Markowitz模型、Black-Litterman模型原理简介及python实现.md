@@ -11,9 +11,9 @@ image: "/img/2018-11-22-01.jpg"
 
 #### 概念
 
-风险价值（Value at Risk, VaR），是给定置信水平和目标时段下预期的最大损失，即在市场正常波动的条件下、在一定的概率水平$\alpha%$下，某一金融资产或金融资产组合的$VaR(\alpha,\delta t)$是在未来特定的一段时间内$\delta t$的最大可能损失，数学表达式为：
+风险价值（Value at Risk, VaR），是给定置信水平和目标时段下预期的最大损失，即在市场正常波动的条件下、在一定的概率水平$\alpha%$下，某一金融资产或金融资产组合的$V\!a\!R(\alpha,\Delta t)$是在未来特定的一段时间内$\Delta t$的最大可能损失，数学表达式为：
 
-$$Pr{X_t<-VaR(\alpha,\delta t)}=\alpha%$$
+$$Pr\left\{X_t<-V\!a\!R(\alpha,\Delta t)\}=\alpha%$$
 
 #### 实操
 
@@ -72,8 +72,8 @@ print( u+Z_01*σ )
 如果投资人的效用水平仅与财富状况相关，个人投资决策的出发点是为了最大化效用，则投资决策的数学表达式：
 
 $$
-max\limits_{\omega_i} \mathbb{E}[U(R_p)]=\mathbb{E}[U(\sum_{i=1}^{N}\omega_iR_i)]
-s.t. \sum_{i=1}^{N}\omega_i=1\mathbb{E}(R_i)
+max\limits_{\omega_i} \mathbb{E}[U(R_p)]=\mathbb{E}[U(\sum_{i=1}^{N}\omega_i R_i)]
+s.t. \sum_{i=1}^{N}\omega_i=1
 $$
 
 
@@ -81,8 +81,8 @@ $$
 假设$R_i,R_2,...,R_N$均服从正态分布，且投资人的效用函数$U(.)$是常见的凹函数，则投资人的上式可以简化为：
 
 $$
-min\limits_{\omega_i}\sigma^2(R_P)=\sum_{i=1}^{N}\omega_i^2\sigma^2(R_i)+\sum_{i\neq j}\omega_i\omega_j\sigma(R_i,R_j)
-s.t. \bar{R}_p=\sum_{i=1}^{N}\omega_i  
+min\limits_{\omega_i}\sigma^2(R_p)=\sum_{i=1}^{N}\omega_i^2\sigma^2(R_i)+\sum_{i\neq j}\omega_i\omega_j\sigma(R_i,R_j)
+s.t. \bar{R}_p=\sum_{i=1}^{N}\mathbb{E}(R_i)
 \sum_{i=1}^{N}\omega_i=1
 $$
 
