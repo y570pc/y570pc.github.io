@@ -4,7 +4,7 @@ title:  "风险价值模型、Markowitz模型原理简介及python实现"
 category: 'quant'
 tags: 风险价值模型 Markowitz模型 python 
 author: y570pc
-image: "/img/2018-11-22-01.jpg"
+image: "/img/2018-11-29-04.png"
 ---
 
 ## 风险价值模型
@@ -13,7 +13,7 @@ image: "/img/2018-11-22-01.jpg"
 
 风险价值（Value at Risk, VaR），是给定置信水平和目标时段下预期的最大损失，即在市场正常波动的条件下、在一定的概率水平$\alpha%$下，某一金融资产或金融资产组合的$\mathit{VaR}(\alpha,\Delta t)$是在未来特定的一段时间内$\Delta t$的最大可能损失，数学表达式为：
 
-$$Pr\left\{X_t<-VaR(\alpha,\Delta t)\}=\alpha%$$
+$$Pr\left\{X_t<-VaR(\alpha,\Delta t)\}=\alpha\%$$
 
 #### 实操
 
