@@ -1,0 +1,3 @@
+## 参考资料
+
+[01]. [Identification and quantification of circular RNA from RNA-Seq data](https://rfarouni.github.io/assets/projects/circRNA/KNIFE_intro.html) 

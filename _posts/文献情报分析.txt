@@ -1,0 +1,7 @@
+## 参考资料
+
+RISmed
+
+[01]. [A brief introduction to bibliometrix](https://cran.r-project.org/web/packages/bibliometrix/vignettes/bibliometrix-vignette.html)
+
+[02]. [文献阅读的文本分析流派](http://blog.sciencenet.cn/blog-430956-1061477.html)
