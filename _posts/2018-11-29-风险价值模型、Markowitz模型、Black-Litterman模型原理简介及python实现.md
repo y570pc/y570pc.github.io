@@ -26,8 +26,16 @@ import tushare as ts
 import pyecharts as pye
 import seaborn as sns
 
- #读入美的“000333”2017-01-01 到 2018-11-08复权后数据
+#读入美的“000333”2017-01-01 到 2018-11-08复权后数据
 df = ts.get_h_data('000333', start='2017-01-01', end='2018-11-8') 
+#其他获取股票数据的方法
+'''
+start_date='01-07-2015'
+end_date='01-07-2017'
+united=quandl.get('WIKI/UAL',start_date=start_date,end_date=end_date)
+america=quandl.get('WIKI/AAL',start_date=start_date,end_date=end_date)
+'''
+
 #计算日均收益率
 df1 = df['close'].sort_index(ascending=True)
 df1 = pd.DataFrame(df1)

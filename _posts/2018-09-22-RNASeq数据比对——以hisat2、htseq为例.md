@@ -10,6 +10,12 @@ image: "http://blog.genesino.com/images/ngs/RNAseq_complex_workflow.png"
 * content
 {:toc}
 
+## 原理
+
+#### 去接头
+
+Trim galore，是可以自动检测adapter。trimmomatic只是针对Illumina高通量测序平台设计的接头去除和低质量reads清洗软件。Trim Galore是对FastQC和Cutadapt的包装，适用于所有高通量测序，包括RRBS(Reduced Representation Bisulfite-Seq ), Illumina、Nextera 和smallRNA测序平台的双端和单端数据。主要功能包括两步：第一步首先去除低质量碱基，然后去除3' 末端的adapter，如果没有指定具体的adapter，程序会自动检测前1million的序列，然后对比前12-13bp的序列是否符合不同测序平台的adapter类型。
+
 ## 常见linux命令<sup>[3]</sup>
 {% highlight js%}
 .   //当前目录
@@ -189,15 +195,15 @@ paste *.txt | awk '{printf $1 "\t";for(i=2;i<=NF;i+=2) printf $i"\t";printf $i}'
 {% endhighlight %}
 
 ## 参考资料
-[1]. [浙大植物学小白的转录组笔记](https://www.wxwenku.com/d/102180058)
+[01]. [浙大植物学小白的转录组笔记](https://www.wxwenku.com/d/102180058)
 
-[2]. [转录组入门(6)： reads计数](https://www.jianshu.com/p/e9742bbf83b9)
+[02]. [转录组入门(6)： reads计数](https://www.jianshu.com/p/e9742bbf83b9)
 
-[3]. [《Advanced Bash-Scripting Guide》 in Chinese](https://linuxstory.gitbooks.io/advanced-bash-scripting-guide-in-chinese/)
+[03]. [《Advanced Bash-Scripting Guide》 in Chinese](https://linuxstory.gitbooks.io/advanced-bash-scripting-guide-in-chinese/)
 
-[4]. [RNASEQ学习流程](https://uteric.github.io/RNASEQ%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B/)
+[04]. [RNASEQ学习流程](https://uteric.github.io/RNASEQ%E5%AD%A6%E4%B9%A0%E6%B5%81%E7%A8%8B/)
 
-
+[05]. [Trim Galore ——自动检测adapter的质控软件](https://www.jianshu.com/p/7a3de6b8e503)
 
 
 
