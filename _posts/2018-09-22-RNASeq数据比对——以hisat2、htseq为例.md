@@ -196,6 +196,8 @@ for key,value in mydict.items():
 paste *.txt | awk '{printf $1 "\t";for(i=2;i<=NF;i+=2) printf $i"\t";printf $i}'
 {% endhighlight %}
 
+bedtools makewindows  计算序列覆盖度
+
 ## 参考资料
 [01]. [浙大植物学小白的转录组笔记](https://www.wxwenku.com/d/102180058)
 
