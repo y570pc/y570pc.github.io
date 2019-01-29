@@ -71,10 +71,21 @@ source deactivate py2
 #### 下载mRNA-seq数据
 
 数据来自于GSE81916中敲除了AKAP95基因的人293细胞的mRNA-seq数据SRR3589956、SRR3589957。
-{% highlight js%}
+```
+###方法一
 cd ~/ncbi/public/sra
 for ((i=56;i<=57;i=i++));do prefetch -v SRR35899$i ;done
-{% endhighlight %}
+
+###方法二
+ftp://ftp.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR548/SRR5483090/
+##sra转fasta
+#单端：
+fastq-dump --fasta SRR6470965.sra    #结果生成 ：SRR6470965.fasta
+fastq-dump  SRR6470965.sra     #结果生成 ：SRR6470965.fastq
+#双端：
+fastq-dump --split-3  DRR002018.sra     #结果生成   DRR002018_1.fastq；DRR002018_2.fastq
+
+```
 
 #### 参考基因组hg19下载
 
