@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "2019-01-10-基于galaxy的16s rRNA和宏基因组分析"
+title:  "基于galaxy的16s rRNA和宏基因组分析"
 category: 'bioinformation'
 tags: docker galaxy 16srrna 宏基因组
 author: y570pc
