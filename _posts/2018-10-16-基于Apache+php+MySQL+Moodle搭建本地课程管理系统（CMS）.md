@@ -11,7 +11,7 @@ image:
 ## 环境配置
 
 ##### apache配置
- 
+
 下载[Apache 2.4.35 Win64](https://www.apachelounge.com/download/)，此为免安装版，解压到amp目录下，修改配置文件`httpd.conf`（注意与php相关的配置根据php版本修改）。
 
 运行cmd，进入Apache24/bin目录，输入httpd.exe，启动http服务器。在浏览器中输入localhost:8080/index.html，显示`It works!`，表明Apache配置成功。
@@ -125,7 +125,7 @@ else
 
 #### 结果展示
 
-![01](/img/2018-10-16-01.png)
+![01](../img/2018-10-16-01.png)
 
 ## 主要参考资料
 [1]. [Windows下Apache+PHP+MySQL搭建历程](https://www.jianshu.com/p/9f41bcdff322)

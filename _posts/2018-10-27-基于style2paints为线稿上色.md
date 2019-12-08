@@ -28,7 +28,7 @@ git clone https://github.com/lllyasviel/style2paints.git
 
 #### 下载训练好的模型
 
-模型已上传至微云（链接：https://share.weiyun.com/5NWhcdZ 密码：tcnker），自行下载，文件列表如下，将其存放至`./style2paints/server`。
+模型已上传至[微云](https://share.weiyun.com/5NWhcdZ)， 密码为tcnker，自行下载，文件列表如下，将其存放至`./style2paints/server`。
 
 ```
 baby.net
@@ -50,7 +50,7 @@ python server.py
 
 浏览器输入`localhost:8000`，上传线稿，选择颜色上色，分为粗调和精调，计算完毕后，显示结果，继续调整至自己满意为止。我的结果如下：
 
-![04](/img/2018-10-26-04.jpg)
+![04](../img/2018-10-26-04.jpg)
 
 ## 参考文献
 

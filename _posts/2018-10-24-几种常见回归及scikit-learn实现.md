@@ -56,7 +56,7 @@ plt.show()
 
 #### 结果展示
 
-![01](/img/2018-10-24-01.png)
+![01](../img/2018-10-24-01.png)
 
 ## Lasso回归
 
@@ -74,7 +74,7 @@ Lasso回归能够使得损失函数中的许多θ均变成0，这点要优于岭
 
 #### 代码
 
-{% highlight python%}
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import r2_score
@@ -108,11 +108,14 @@ plt.legend(loc="best")
 plt.title("Lasso R^2: %f"
           % (r2_score_lasso))
 plt.show()
-{% endhighlight %}
+
+```
+
+```
 
 #### 结果展示
 
-![02](/img/2018-10-24-02.png)
+![02](../img/2018-10-24-02.png)
 
 ## 正交匹配追踪（Orthogonal Matching Pursuit ）
 

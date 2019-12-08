@@ -27,7 +27,7 @@ image: "/img/2018-10-18-01.jpg"
 
 ## 代码
 
-{% highlight js%}
+```js
 <!DOCTYPE html>
 <html>
 <head>
@@ -112,7 +112,7 @@ image: "/img/2018-10-18-01.jpg"
 		}        
 	},{enableHighAccuracy: true});
 </script>
-{% endhighlight %}
+```
 
 ## 参考资料
 

@@ -14,11 +14,11 @@ image: 'http://images.cnitblog.com/news/66372/201411/131709068356625.png'
 ## 站在巨人的肩膀上
 Fork [xudailong.github.io](https://github.com/xudailong/xudailong.github.io)（博客模板）到我的仓库（repository）。
 
-![01](/img/2018-09-21-01.jpg)
+![01](../img/2018-09-21-01.jpg)
 
 到我的对应仓库，点击Settings，rename仓库名。
 
-![02](/img/2018-09-21-02.jpg)
+![02](../img/2018-09-21-02.jpg)
 
 ## 本地编辑
 将仓库文件copy到本地。
@@ -58,13 +58,14 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   
+
 //修改后
 markdown: kramdown
 highlighter: pygments
 {% endhighlight %}
 
 * md文件实现代码高亮的语法
-![03](/img/2018-09-21-03.jpg)
+![03](../img/2018-09-21-03.jpg)
 
 * 显示效果
 {% highlight python%}
@@ -78,11 +79,11 @@ text = r.recognize_ibm(audio, username='b1c2ce4f-1420-4f49-82c5-ed73cfb320ec', p
 
 #### 博文中添加图片
 * 在本地仓库的根目录下新建图片文件夹img。将所需的图片保存至该文件夹下。
-![04](/img/2018-09-21-04.jpg)
+![04](../img/2018-09-21-04.jpg)
 
 * md文件引用图片的语法
 {% highlight js%}
-![03](/img/2018-09-21-03.jpg) //[]内可以任意取名，()内即为图片路径
+![03](../img/2018-09-21-03.jpg) //[]内可以任意取名，()内即为图片路径
 {% endhighlight %}
 
 #### 修改字体
@@ -91,6 +92,7 @@ text = r.recognize_ibm(audio, username='b1c2ce4f-1420-4f49-82c5-ed73cfb320ec', p
 //修改前
 base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   
+
 //修改后
 base-font-family: "Times New Roman",Georgia;
 {% endhighlight %}
@@ -111,7 +113,7 @@ base-font-family: "Times New Roman",Georgia;
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-  
+
 //修改后
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
 <script type="text/x-mathjax-config">
@@ -144,7 +146,7 @@ $$
     \end{array} \right)
 \end{align*}
 $$
-  
+
 //段内插入
 公式$\exp(-\frac{x^2}{2})$
 {% endhighlight %}
@@ -178,7 +180,6 @@ $$
 
 * 插入效果展示
 <iframe src="https://music.163.com/outchain/player?type=3&id=794070604&auto=0&height=66" width="500px" height="80px" frameborder="0" scrolling="no"> </iframe>
-
 ## 参考资料
 
 [1]. [Linux(Ubuntu 64)下安装GIt并配置连接GitHub](https://www.jianshu.com/p/6c61b13e8bdb)

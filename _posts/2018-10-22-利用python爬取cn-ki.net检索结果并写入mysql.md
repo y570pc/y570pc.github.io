@@ -42,7 +42,7 @@ CREATE TABLE `lunwen` (
 
 ## 代码
 
-{% highlight python%}
+```python
 import requests
 import mysql.connector
 from lxml import html
@@ -140,7 +140,7 @@ print('>>>>>>>>>>>>>>>>  数据导出结束，共导出 %d 篇文献！<<<<<<<<<
 # 关闭数据库
 conn.commit()
 cur.close()
-{% endhighlight %}
+```
 
 ## 参考资料
 

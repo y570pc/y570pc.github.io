@@ -14,9 +14,9 @@ image: "/img/2018-10-25-03.png"
 
 #### 二代测序原理
 
-![01](/img/2018-10-25-01.jpg)
+![01](../img/2018-10-25-01.jpg)
 
-![02](/img/2018-10-25-02.jpg)
+![02](../img/2018-10-25-02.jpg)
 
 Illumia测序原理简单概括就是将文库结合到测序芯片上，并通过PCR将单一序列扩增成簇以提高信号强度，然后测序时收集每一簇的荧光信号，并转换为相应的碱基，从而获取测序数据。
 
@@ -137,7 +137,7 @@ time ~/software/gatk-4.0.11.0/gatk MergeVcfs \
     -I E_coli_K12.snp.filter.vcf.gz \
     -I E_coli_K12.indel.filter.vcf.gz \
     -O E_coli_K12.filter.vcf.gz
-```	
+```
 
 ## 参考资料
 [1]. [GATK4.0和全基因组数据分析实践（上）](https://www.jianshu.com/p/66361e7e2340)
